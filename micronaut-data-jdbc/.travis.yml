@@ -1,0 +1,9 @@
+services:
+  - docker
+language: java
+jdk:
+  - openjdk8
+script:
+  - gradlew assemble
+after_script:
+  - bash docker-build.sh
