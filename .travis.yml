@@ -13,4 +13,4 @@ script:
   - ./gradlew :micronaut-data-jdbc:assemble
 
 after_script:
-  - docker ps -a
+  - bash ./docker-build-all.sh
