@@ -18,5 +18,5 @@ script:
   - ./docker-build-all.sh
 
 after_script:
-  - ./docker-push.sh
+  - ./docker-push-all.sh
   
