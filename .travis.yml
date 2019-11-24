@@ -8,9 +8,15 @@ jdk:
   
 before_install:
  - chmod +x gradlew
+ - chmod +x docker-build-all.sh
+ - chmod +x docker-push.sh
 
-script:
+before_script:
   - ./gradlew :micronaut-data-jdbc:assemble
 
-after_script:
-  - bash ./docker-build-all.sh
+script:
+  - ./docker-build-all.sh
+
+deploy:
+  - ./docker-push.sh
+  
